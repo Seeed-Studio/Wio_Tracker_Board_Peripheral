@@ -325,7 +325,6 @@ bool Tracker_Peripheral::measureSoundAdc(uint16_t* sound_adc)
 {
     uint32_t sum = 0;
     int  adc_val = 0;
-    uint16_t temp_val = 0;
 
     for(int i=0; i<16; i++)
     {
@@ -408,7 +407,7 @@ void Tracker_Peripheral::displaySensorDatas( void )
     //voc index
     if( sensor_data.sgp41_voc_index != 0x8000 )
     {
-        printf("tVOC index:%d\r\n",sensor_data.sgp41_voc_index); 
+        printf("tVOC index:%ld\r\n",sensor_data.sgp41_voc_index); 
     }
     //sound
     if( sensor_data.sound_val != 0x8000 )
